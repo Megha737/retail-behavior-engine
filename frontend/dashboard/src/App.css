@@ -1,0 +1,154 @@
+/* --- ENTERPRISE THEME VARIABLES --- */
+:root {
+  /* Corporate Dark Mode */
+  --bg-main: #0f172a;       /* Deep slate */
+  --bg-box: #1e293b;        /* Subtle elevation */
+  --text-main: #f8fafc;     /* Clean white */
+  --text-muted: #94a3b8;    /* Professional gray */
+  --border: #334155;        /* Soft border */
+  --heading: #ffffff;
+  --accent: #6366f1;        /* Corporate Indigo */
+  --row-hover: #33415550;
+  --shadow: rgba(0, 0, 0, 0.2);
+}
+
+.light-mode {
+  /* Clean Light Mode (Apple/Stripe vibe) */
+  --bg-main: #f8fafc;       
+  --bg-box: #ffffff;        
+  --text-main: #0f172a;     
+  --text-muted: #64748b;    
+  --border: #e2e8f0;        
+  --heading: #0f172a;
+  --accent: #4f46e5;        
+  --row-hover: #f1f5f9;
+  --shadow: rgba(17, 12, 46, 0.05) 0px 48px 100px 0px;
+}
+
+/* --- GLOBAL STYLES --- */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  padding: 40px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- HEADER & TOGGLE --- */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.header-container h1 {
+  margin: 0;
+  color: var(--heading);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.theme-toggle {
+  background-color: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.theme-toggle:hover {
+  color: var(--text-main);
+  background-color: var(--bg-box);
+  border-color: var(--text-muted);
+}
+
+/* --- MINIMALIST BENTO BOX --- */
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+}
+
+.bento-box {
+  background: var(--bg-box);
+  border: 1px solid var(--border);
+  border-radius: 12px; /* Sharper, more professional corners */
+  padding: 24px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.bento-box h3 {
+  margin-top: 0;
+  color: var(--heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+/* --- DATA TABLE --- */
+.cyber-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cyber-table th, .cyber-table td {
+  padding: 14px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.cyber-table th {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.cyber-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.cyber-table tbody tr:hover {
+  background-color: var(--row-hover);
+}
+
+.highlight-spend {
+  color: var(--accent);
+  font-weight: 600;
+}
+/* --- EXPORT BUTTON --- */
+.export-btn {
+  background-color: var(--accent);
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  float: right;
+}
+
+.export-btn:hover {
+  opacity: 0.85;
+}
